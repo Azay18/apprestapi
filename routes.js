@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(app) {
+module.exports = function (app) {
     var myjson = require('./controller');
 
     app.route('/')
@@ -8,7 +8,10 @@ module.exports = function(app) {
 
     app.route('/tampil')
         .get(myjson.tampilmahasiswa);
-    
-        app.route('/tampil/:id')
+
+    app.route('/tampil/:id')
         .get(myjson.tampilsesuaiid);
+
+    app.route('/ubah')
+        .put(myjson.ubahMahasiswa);
 }
