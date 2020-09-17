@@ -17,4 +17,7 @@ module.exports = function (app) {
     
     app.route('/hapus')
         .delete(myjson.hapusMahasiswa);
+    
+    app.route('/tampilmatakuliah')
+        .get(myjson.tampilMatakuliah);
 }
