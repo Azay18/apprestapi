@@ -8,4 +8,7 @@ module.exports = function(app) {
 
     app.route('/tampil')
         .get(myjson.tampilmahasiswa);
+    
+        app.route('/tampil/:id')
+        .get(myjson.tampilsesuaiid);
 }
